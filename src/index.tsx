@@ -15,6 +15,25 @@ class Clock extends React.Component<ClockFilter, any> {
         this.state = { date: new Date() };
     }
 
+    private timerID: any;
+
+    componentDidMount() {
+        this.timerID = setInterval(
+            () => this.tick(),
+            1000
+        );
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timerID);
+    }
+
+    tick() {
+        this.setState({
+            date: new Date()
+        });
+    }
+
     render() {
         return (
             <div>
@@ -25,14 +44,10 @@ class Clock extends React.Component<ClockFilter, any> {
     }
 }
 
-function tick() {
-    ReactDOM.render(
-        <Clock />,
-        document.getElementById('root')
-    );
-}
-
-setInterval(tick, 1000);
+ReactDOM.render(
+    <Clock />,
+    document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
