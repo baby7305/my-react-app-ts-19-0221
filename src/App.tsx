@@ -9,6 +9,10 @@ class App extends Component {
   }
 }
 
-const element = <h1>Hello, world!</h1>;
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+const element = <Welcome name="Sara" />;
 
 export default App;
