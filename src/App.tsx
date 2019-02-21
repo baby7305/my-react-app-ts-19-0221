@@ -4,7 +4,11 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      element
+      <div>
+        <Welcome name="Sara" />
+        <Welcome name="Cahal" />
+        <Welcome name="Edite" />
+      </div>
     );
   }
 }
@@ -12,7 +16,5 @@ class App extends Component {
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
-
-const element = <Welcome name="Sara" />;
 
 export default App;
