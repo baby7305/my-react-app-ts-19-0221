@@ -4,52 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-export interface ClockFilter {
-    date?: Date;
-}
-
-class Clock extends React.Component<ClockFilter, any> {
-
-    constructor(props) {
-        super(props);
-        this.state = { date: new Date() };
-    }
-
-    private timerID: any;
-
-    componentDidMount() {
-        this.timerID = setInterval(
-            () => this.tick(),
-            1000
-        );
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.timerID);
-    }
-
-    tick() {
-        this.setState({
-            date: new Date()
-        });
-    }
-
-    render() {
-        return (
-            <div>
-                <h1>Hello, world!</h1>
-                <FormattedDate date={this.state.date} />
-            </div>
-        );
-    }
-}
-
-function FormattedDate(props) {
-    return <h2>It is {props.date.toLocaleTimeString()}.</h2>;
-}
-
 ReactDOM.render(
-    <Clock />,
+    <App />,
     document.getElementById('root')
 );
 
