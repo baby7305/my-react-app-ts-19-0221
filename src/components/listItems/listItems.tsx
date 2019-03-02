@@ -7,14 +7,13 @@ function ListItem(props) {
 
 function NumberList(props) {
     const numbers = props.numbers;
-    const listItems = numbers.map((number) =>
-        // 又对啦！key应该在数组的上下文中被指定
-        <ListItem key={number.toString()}
-            value={number} />
-    );
     return (
         <ul>
-            {listItems}
+            {numbers.map((number) =>
+                <ListItem key={number.toString()}
+                    value={number} />
+
+            )}
         </ul>
     );
 }
