@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import listItems from './components/listItems/listItems';
+import NumberList from './components/listItems/listItems';
 import * as serviceWorker from './serviceWorker';
 
+const numbers = [1, 2, 3, 4, 5];
+
 ReactDOM.render(
-    <ul>{listItems}</ul>,
+    <NumberList numbers={numbers} />,
     document.getElementById('root')
 );
 
