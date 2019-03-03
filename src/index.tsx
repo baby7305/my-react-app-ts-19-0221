@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Parent from './components/Modal/Parent';
 import * as serviceWorker from './serviceWorker';
 
 const appRoot = document.getElementById('app-root');
 
-ReactDOM.render(<App />, appRoot);
+ReactDOM.render(<Parent />, appRoot);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
