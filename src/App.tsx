@@ -9,6 +9,13 @@ class App extends Component {
   }
 }
 
-const element = <h1>Hello, world!</h1>;
+const element =
+  <>
+    Some text.
+    <h2>A heading</h2>
+    More text.
+    <h2>Another heading</h2>
+    Even more text.
+  </>;
 
 export default App;
